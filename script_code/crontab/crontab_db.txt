@@ -1,0 +1,6 @@
+#exec load log center every minute
+*/1 * * * *  /crontab/csv_to_logcenter.sh >>/var/logs/csv_to_logcenter.sh.log 2>&1 &
+*/1 * * * *  node /crontab/api_minute_stats.js >>/var/logs/api_minute_stats.js.log 2>&1 &
+
+# every day exec one times to backup logcenter
+*/1 * * * *  /crontab/backup.sh >>/var/logs/backup.sh.log 2>&1 &

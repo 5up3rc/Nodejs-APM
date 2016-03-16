@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+/**-------全局公共样式--------**/
+*{margin:0;padding:0;border:0;color:#333;list-style:none;text-decoration:none}
+html,body{height:100%;font:13px/1.8 Tahoma,microsoft yahei,"微软雅黑","宋体"}
+body{overflow-y:scroll}
+h1,h2,h3,h4,h5,h6{display:inline;text-shadow:1px 1px 0 #fdfdfd,2px 2px 0 rgba(81,81,81,0.5),0 0 1px #fdfdfd}
+input,textarea,select{border:#d2d3d6 1px solid;padding:6px 4px;border-radius:3px}
+input.search_focus{border:#d2d3d6 1px solid;border-radius:3px}
+.btn,.mui-act{border-radius:2px;color:#fff;font-weight:bold;margin-left:10px;cursor:pointer;background:#0074bb}
+.btn{display:inline-block;padding:7px 10px}
+.mui-act{padding:3px 6px 4px 5px}
+.btn:hover,.mui-act:hover{color:#fff;background:#009dec}
+.cursor{cursor: pointer;}
+a:hover{color:#08c}
+.tleft{text-align:left}
+.tright{text-align:right}
+.tcenter{text-align:center}
+.mui-global-fr{float:right} 
+.mui-global-fl{float:left}
+.mui-global-bl{border-left:1px solid #bdbdbd}
+.mui-global-br{border-right:1px solid #bdbdbd}
+.mui-global-bt{border-top:1px solid #bdbdbd}
+.mui-global-bb{border-bottom:1px solid #bdbdbd}
+.mui-global-b{border:1px solid #bdbdbd}
+.mui-global-inline{display:inline-block;zoom:1;vertical-align:top}
+.mui-global-num{font-family:Georgia,"Times New Roman",Times,serif}
+.m10{margin:10px 0}
+.m20{margin:20px}
+.silver{color:#ccc}
+.white{color:#fff}
+.blue{color:#00f}
+.red{color:#f00}
+.hide{display:none}
+.show{display:block}
+table{border-collapse:collapse;border-spacing:0}
+.doc{min-width:1280px}
+.error{border:1px solid #fed22f;border-radius:3px;background:#ffe45c;padding:3px 10px;margin:5px 0;display:none}
+.error span{color:#cd0a0a}
+.error .tips{padding:0 10px}
+
+/**-------外层容器样式--------**/
+.mui-nav-top{width:100%;padding:0 10px;height:42px;line-height:42px;background:#438eb9;}
+.mui-logo{font-size:20px;text-align:center;width:170px}
+.mui-user-info{font-size:14px;width:160px;padding:0 10px;text-align:right;background: #62a8d1}
+.mui-nav-top a,.mui-nav-top a i{color:#fff;padding-right:5px}
+.mui-nav-top .mui-nav-item{padding:13px 15px;height:42px;line-height:42px;font-size:14px}
+.mui-nav-top .mui-nav-item:hover,.mui-cursor-nav{background:#2e8965;}
+.mui-nav-top .mui-nav-user{text-al:right}
+.mui-layout{min-width:1200px;background:#edeef0}
+.mui-layout-left{position:relative;background:#fff;box-shadow:0 2px 3px rgba(0,0,0,0.1);width:170px;float:left}
+.mui-sidebar-model{border-bottom:1px solid #ddd}
+.mui-layout-right{margin-left:171px}
+.mui-filter{box-shadow:0 2px 3px rgba(0,0,0,0.1);background:#fff;padding:10px}
+.mui-filter-group{min-height: 30px;margin-top:10px}
+.mui-filter-table {width:100%;table-layout:fixed}
+.mui-filter-table .mui-filter-title { padding:10px;width:120px;}
+.mui-filter-table .mui-filter-form form{float:right;padding-right:20px;}
+
+/**-------左边类目样式--------**/
+.mui-sidebar-model a{display:block;height:30px;line-height:30px;border-left:6px solid #fff}
+.mui-sidebar-model .mui-sider-item a{text-indent:20px}
+.mui-sidebar-model a.mui-sidebar-cur{border-left:6px solid #3794e3;background:#e0ecf9}
+.mui-sort{position:absolute;left:145px}
+.mui-container{background:#fff;box-shadow:0 2px 3px rgba(0,0,0,0.1)}
