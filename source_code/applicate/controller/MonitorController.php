@@ -32,7 +32,7 @@ class MonitorController extends Controller {
         if ( $id ) {
             $data = Cool::model ( 'Config' )->find_by_id ( $id );
         } else {
-            $data = array( 'id' => '', 'name' => '', 'dept' => '', 'leader' => '', 'tel' => '', 'desc' => '' );
+            $data = array( 'id' => '', 'name' => '', 'dept' => '', 'leader' => '', 'tel' => '', 'desc' => '', 'ratio' => 0 );
         }
         $this->display ( 'monitor/project_modify', $data );
     }
@@ -43,9 +43,12 @@ class MonitorController extends Controller {
      */
     public function save () {
         $data = fetch_val ( 'post.' );
+        if (intval($data['ratio']) > 100 || intval($data['ratio']) < 0) {
+            $this->json ( 1, array( 'act' => 'error', 'data' => 'ACCESS上报比例必须在0-100之间' ) );
+        }
         if ( isset( $data['id'] ) && $data['id'] ) { // update
             $update = array(
-                'name'   => $data['name'], 'dept' => $data['dept'],
+                'name'   => $data['name'], 'dept' => $data['dept'], 'ratio' => intval($data['ratio']),
                 'leader' => $data['leader'], 'tel' => $data['tel'], 'desc' => $data['desc']
             );
             $return = Cool::model ( 'Config' )->updated ( $update, array( 'id' => $data['id'] ) );
@@ -54,6 +57,7 @@ class MonitorController extends Controller {
                 'name'   => $data['name'], 'dept' => $data['dept'],
                 'leader' => $data['leader'], 'tel' => $data['tel'],
                 'desc'   => $data['desc'], 'create_time' => time (),
+                'ratio' => intval($data['ratio'])
             );
             $return = Cool::model ( 'Config' )->add ( $insert );
         }

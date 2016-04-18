@@ -10,6 +10,7 @@
             <tr>
                 <th>项目名称</th>
                 <th>项目标识</th>
+                <th>Access上报比例</th>
                 <th>所属部门</th>
                 <th>负责人</th>
                 <th>联系电话</th>
@@ -22,6 +23,7 @@
             <tr>
                 <td><?php echo $value['name']; ?></td>
                 <td><?php echo $value['id']; ?></td>
+                <td><?php echo $value['ratio']; ?></td>
                 <td><?php echo $value['dept']; ?></td>
                 <td><?php echo $value['leader']; ?></td>
                 <td><?php echo $value['tel']; ?></td>

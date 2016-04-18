@@ -9,6 +9,10 @@
                     <td><input type="text" value="<?php echo $data['name'];?>" name="name" class="input-text" maxLength="64" required="true" /></td>
                 </tr>
                 <tr>
+                    <th class="mui-table-row">Access上报比例</th>
+                    <td><input type="text" value="<?php echo $data['ratio'];?>" name="ratio" class="input-text" maxLength="64" required="true" /></td>
+                </tr>
+                <tr>
                     <th class="mui-table-row">所属部门</th>
                     <td><input type="text" value="<?php echo $data['dept'];?>" name="dept" class="input-text" maxLength="64" required="true" /></td>
                 </tr>

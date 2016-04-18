@@ -13,7 +13,7 @@ class ConfigModel extends Model {
      * 连接的DB
      * @var string
      */
-    protected $db = 'config';
+    protected $db = 'backend';
 
     /**
      * 查询项目数据

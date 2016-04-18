@@ -13,6 +13,5 @@ $config ['debug'] = true;
 $config ['auto_route'] = true;
 
 $config ['default_database'] = 'backend';
-$config ['default_redis'] = 'default';
 $config ['page_size'] = 10;
 /* End of file config.php */
