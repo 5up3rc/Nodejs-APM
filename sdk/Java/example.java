@@ -1,10 +1,5 @@
-package com.guosen.kuanggong.apm;
 import java.io.IOException;
-import java.security.Timestamp;
-import java.util.Date;
 
-import javax.lang.model.element.VariableElement;
-import javax.xml.crypto.Data;
 public class example {
 
 	public static void main(String[] args) throws IOException {
@@ -13,10 +8,9 @@ public class example {
 		int port = 6969;
 		int ratio = 100;
 		boolean isNeedSend = true;
-		long apiInitTime = new Date().getTime();
+		long apiInitTime = System.currentTimeMillis();
 		int projectId = 1;
 		int maxMsgLen = 2000;
-
 		// ReportSDK
 		ReportSDK ReportSDK = new ReportSDK(host, port, isNeedSend, ratio, apiInitTime, projectId, maxMsgLen);
 		// start report
@@ -24,7 +18,7 @@ public class example {
 		// first function
 		testFunc();
 		ReportSDK.setExeLogPoint("run Func-testFunc");
-		int playerId = 1;
+		long playerId = 13800000000;
 		String module = "test_module";
 		String cmd = "/example.java";
 		try {
@@ -43,8 +37,8 @@ public class example {
 	private static void testFunc() {
 		// TODO Auto-generated method stub
 		try {
-			Thread.sleep(3000);
-			System.out.println("Test testFunc... sleep 3000 ms");
+			Thread.sleep(1000);
+			System.out.println("Test testFunc... sleep 1000 ms");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -54,8 +48,8 @@ public class example {
 	private static void testFunc1() {
 		// TODO Auto-generated method stub
 		try {
-			Thread.sleep(3000);
-			System.out.printf("Test testFunc1... sleep 3000 ms");
+			Thread.sleep(1000);
+			System.out.printf("Test testFunc1... sleep 1000 ms");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
