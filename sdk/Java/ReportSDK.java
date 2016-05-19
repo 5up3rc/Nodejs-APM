@@ -81,7 +81,7 @@ public class ReportSDK {
 	 * @param cmd
 	 * @return
 	 */
-	public boolean sendAccessLog(String module, long playerId, String cmd) {
+	public boolean sendAccessLog(String module, String playerId, String cmd) {
 		
 		int ratio = random.nextInt(100);
 		if (this.isNeedSend == false || ratio > this.ratio || module == null || cmd == null) {
@@ -124,7 +124,7 @@ System.out.println("output="+logBuffer);
 		return true;
 	}
 	
-	public boolean sendErrorLog(String module, long playerId, String cmd, int level, int errCode, String msg,
+	public boolean sendErrorLog(String module, String playerId, String cmd, int level, int errCode, String msg,
 			String fileName, int fileLine, String funcName) throws IOException {
 
 		if (this.isNeedSend == false || module == null || cmd == null) {

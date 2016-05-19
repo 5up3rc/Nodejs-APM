@@ -18,7 +18,7 @@ public class example {
 		// first function
 		testFunc();
 		ReportSDK.setExeLogPoint("run Func-testFunc");
-		long playerId = 13800000000;
+		String playerId = '13800000000';
 		String module = "test_module";
 		String cmd = "/example.java";
 		try {

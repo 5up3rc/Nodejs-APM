@@ -4,7 +4,7 @@ use BH_log_center;
 CREATE table if not exists `BH_t_linelog` (
   `log_type` varchar(50) DEFAULT NULL,
   `hostip` varchar(100) DEFAULT NULL COMMENT 'lookup',
-  `playerid` int(11) DEFAULT '-1',
+  `playerid` varchar(64) DEFAULT '-1',
   `module` varchar(100) DEFAULT NULL,
   `cmd` varchar(200) DEFAULT NULL COMMENT 'lookup',
   `errcode` int(11) DEFAULT NULL,
